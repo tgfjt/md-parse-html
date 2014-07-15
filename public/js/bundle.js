@@ -44053,17 +44053,18 @@ window.addEventListener('DOMContentLoaded', function() {
 
 	$mdarea.addEventListener('keydown', function() {
 		var self = this;
-		var text = this.querySelector('.ace_content').innerText;
+		var text;
 
 		setTimeout(function() {
-			document.getElementById('html-result').innerHTML = parse.call(self, text);
-		}, 200);
+			text = self.querySelector('.ace_content').innerText;
+			document.getElementById('html-result').innerHTML = htmlEditor(parse.call(self, text));
+		}, 250);
 	});
 }, false);
 
 
 
-}).call(this,require("oMfpAn"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_d06daa92.js","/")
+}).call(this,require("oMfpAn"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_593ce488.js","/")
 },{"./lib/html-editor":93,"./lib/markdown-editor":94,"./lib/parse":95,"buffer":9,"oMfpAn":15}],93:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var ace = require('brace');
