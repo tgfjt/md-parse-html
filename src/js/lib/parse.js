@@ -1,0 +1,17 @@
+var marked = require('marked');
+var tasklists = require('task-lists');
+
+module.exports = function(text) {
+	marked.setOptions({
+		renderer: new marked.Renderer(),
+		gfm: true,
+		tables: true,
+		breaks: false,
+		pedantic: false,
+		sanitize: true,
+		smartLists: true,
+		smartypants: false
+	});
+
+	return tasklists(marked(text));
+};

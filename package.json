@@ -1,0 +1,30 @@
+{
+  "name": "md-parse-html",
+  "version": "0.0.1",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "pretest": "./node_modules/.bin/gulp lint",
+    "test": "node tests/*.js",
+    "start": "node server"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "author": "tgfjt",
+  "license": "MIt",
+  "dependencies": {
+    "brace": "^0.3.0",
+    "express": "^4.6.1",
+    "hbs": "^2.7.0",
+    "marked": "^0.3.2",
+    "task-lists": "^0.1.3"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.6",
+    "gulp-browserify": "^0.5.0",
+    "gulp-jshint": "^1.7.1",
+    "jshint-stylish": "^0.4.0",
+    "tape": "^2.13.3"
+  }
+}
