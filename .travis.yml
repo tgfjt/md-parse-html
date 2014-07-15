@@ -1,8 +1,16 @@
 language: node_js
 node_js:
-  - "0.8"
-  - "0.10"
-  - "0.11"
+- '0.8'
+- '0.10'
+- '0.11'
 script: npm run-script pretest
 before_install:
-  - npm update -g npm
+- npm update -g npm
+deploy:
+  provider: heroku
+  api_key:
+    secure: BKhNi0knWfJ803YIVxNg3WLpUvV7B7LCFqU0vIcuSMmx34h7wllGrp8FtvlVPL37hrbsWNTYJdn0tTX39yMwtO+EEqxUwKwIQwGvTWTifp/Wywa+jy7HBnpjgsam9jiKXjT23zrWb3gaMEOxXniOIWZzQpG+DyDJkq0W+vGklww=
+  app:
+    master: md-parse-html
+  on:
+    repo: tgfjt/md-parse-html
