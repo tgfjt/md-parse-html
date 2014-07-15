@@ -6,7 +6,7 @@
   right: 0;
 }
 
-.editor {
+.wrapper .editor {
   position: absolute;
   width: 50%;
   height: 40%;
